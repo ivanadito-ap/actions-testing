@@ -3,12 +3,12 @@
  */
 package org.example;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import com.google.gson.Gson;
+import java.util.Map;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+public class App {
+  public static void main(String[] args) {
+    var gson = new Gson();
+    System.out.println(gson.toJson(Map.of("hello", "world")));
+  }
 }

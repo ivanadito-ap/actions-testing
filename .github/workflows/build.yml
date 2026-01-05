@@ -20,11 +20,11 @@ jobs:
       uses: gradle/actions/setup-gradle@v5
 
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew build shadowJar
 
-    - name: Upload App Jar
+    - name: Upload App JAR
       uses: actions/upload-artifact@v4
       with:
-        name: app.jar
+        name: jars
         path: |
-          app/build/libs/app.jar
+          **/build/libs/*.jar
