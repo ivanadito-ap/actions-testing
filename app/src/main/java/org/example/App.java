@@ -7,8 +7,12 @@ import com.google.gson.Gson;
 import java.util.Map;
 
 public class App {
-  public static void main(String[] args) {
-    var gson = new Gson();
-    System.out.println(gson.toJson(Map.of("hello", "world")));
-  }
+    public String getGreeting(){
+        var gson = new Gson();
+        return gson.toJson(Map.of("Hello", "world"));
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new App().getGreeting());
+    }
 }
