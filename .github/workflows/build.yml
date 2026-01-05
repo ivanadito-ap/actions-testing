@@ -22,9 +22,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Upload JARs
+    - name: Upload App Jar
       uses: actions/upload-artifact@v4
       with:
-        name: jars
+        name: app.jar
         path: |
-          **/build/libs/*.jar
+          app/build/libs/app.jar
